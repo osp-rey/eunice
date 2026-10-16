@@ -1,0 +1,15 @@
+:root {
+  --content-width: 1720px;
+  --offset-width: 15px;
+  --container-width: calc(var(--content-width) + (var(--offset-width) * 2));
+
+  --primary: #cd1125;
+  --primary-h: #b31323;
+
+  --secondary: #2a7abe;
+  --green: #4ea847;
+
+  --black: #262626;
+
+  --porcelain: #f6f7f8;
+}

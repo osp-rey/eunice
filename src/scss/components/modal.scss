@@ -1,0 +1,51 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.fancybox__backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal {
+  padding: 30px;
+  display: none;
+  cursor: auto;
+  width: 550px;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+  color: var(--black);
+  @include tablet {
+    padding: 20px 18px;
+  }
+
+  &__body {
+    width: 100%;
+  }
+  &__head {
+    text-align: center;
+  }
+  &__title {
+    font-size: 36px;
+    @include laptop-middle {
+      font-size: 32px;
+    }
+    @include tablet {
+      font-size: 28px;
+    }
+  }
+  &__content {
+    margin-top: 20px;
+  }
+  &__form {
+    margin-top: 30px;
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .btn-s[type="submit"] {
+      width: 100%;
+    }
+  }
+}

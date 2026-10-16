@@ -1,0 +1,125 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-technology {
+  &__head {
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+  &__content {
+    margin-top: 20px;
+  }
+  &__wrap {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 40px;
+
+    @include laptop-middle {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+  &__adv {
+    flex: 0 1 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    @include laptop-middle {
+      flex: auto;
+      width: 100%;
+    }
+    @include laptop-min {
+      gap: 20px;
+    }
+    @include tablet-min {
+      gap: 15px;
+      grid-template-columns: 1fr
+    }
+  }
+  &__adv-item {
+    @include tablet-min {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .item-circle {
+      @include flex-center;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      margin-bottom: 20px;
+
+      @include tablet {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+      }
+      @include tablet-min {
+        margin-bottom: 0;
+      }
+
+      img {
+        display: block;
+        width: 25px;
+        @include tablet {
+          width: 20px;
+        }
+      }
+    }
+    .item-title {
+      font-weight: 500;
+      font-size: 20px;
+      @include laptop {
+        font-size: 18px;
+      }
+      @include tablet {
+        font-size: 16px;
+      }
+    }
+    .item-text {
+      margin-top: 10px;
+      @include tablet {
+        margin-top: 5px;
+      }
+    }
+  }
+  &__gallery {
+    position: relative;
+    width: 980px;
+    max-width: 100%;
+    @include desktop {
+      width: 800px;
+    }
+    @include laptop-middle {
+      margin: 0 auto;
+      width: 980px;
+      padding-top: 90px;
+    }
+    @include tablet {
+      padding-top: 50px;
+    }
+    @include tablet-min {
+      padding-top: 35px;
+    }
+  }
+  &__gallery-decor {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 90%;
+    top: -24%;
+    pointer-events: none;
+    z-index: -1;
+    @include laptop-middle {
+      top: 0;
+    }
+    @include tablet-min {
+      width: 250px;
+    }
+  }
+  &__video-player {
+    width: 100%;
+    aspect-ratio: 1/0.55;
+  }
+}

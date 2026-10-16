@@ -1,0 +1,53 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.sect-wrap {
+  display: flex;
+  align-items: start;
+  gap: 55px;
+  @include desktop-big {
+    gap: 40px;
+  }
+  @include desktop {
+    gap: 30px;
+  }
+  @include laptop {
+    display: block;
+  }
+}
+.sect-tag {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+  color: #8f8f8f;
+  flex-shrink: 0;
+  
+  @media (min-width: 1366px) {
+    position: sticky;
+    writing-mode: sideways-lr;
+  }
+  @include laptop {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  @include laptop-min {
+    font-size: 16px;
+  }
+  @include tablet-min {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+}
+.sect-body {
+  flex: 1;
+}
+.sect-m {
+  margin: 90px 0px;
+
+  @include laptop-middle {
+    margin: 75px 0px;
+  }
+  @include tablet {
+    margin: 50px 0px;
+  }
+}

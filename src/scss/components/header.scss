@@ -1,0 +1,157 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 20px 0px;
+  background-color: white;
+  z-index: 100;
+  @include laptop-min {
+    padding: 15px 0px;
+  }
+  @include tablet-min {
+    padding: 10px 0px;
+  }
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    @include desktop-big {
+      gap: 30px;
+    }
+    @include laptop-min {
+      align-items: center;
+    }
+  }
+  &__logo {
+    display: block;
+    width: 160px;
+
+    @include desktop {
+      width: 140px;
+    }
+    @include tablet {
+      width: 105px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__nav {
+    align-self: flex-end;
+    padding-bottom: 6px;
+    @include laptop {
+      padding-bottom: 0;
+    }
+    @include laptop-min {
+      position: absolute;
+      left: -9999px;
+      z-index: -9999;
+    }
+  }
+  &__list {
+    display: flex;
+    gap: 50px;
+    @include desktop-big {
+      gap: 30px;
+    }
+    @include desktop {
+      gap: 20px;
+      font-size: 16px;
+    }
+
+    a {
+      position: relative;
+      font-weight: 200;
+      display: block;
+      padding-bottom: 10px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        height: 2px;
+        background-color: var(--primary);
+
+        transition: right 0.3s ease;
+      }
+
+      &._active {
+        &::before {
+          right: 0;
+        }
+      }
+      @include hover {
+        &::before {
+          right: 0;
+        }
+      }
+    }
+  }
+  &__contacts {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    gap: 50px;
+
+    @include desktop-big {
+      gap: 30px;
+    }
+    @include laptop-min {
+      display: none;
+    }
+  }
+  &__contacts-block {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 5px;
+  }
+  &__tel {
+    font-weight: 500;
+    font-size: 20px;
+
+    transition: color 0.3s ease;
+
+    @include hover {
+      color: var(--primary);
+    }
+    @include laptop {
+      font-size: 18px;
+    }
+  }
+  &__address {
+    font-weight: 200;
+    font-size: 16px;
+    @include laptop {
+      font-size: 14px;
+    }
+  }
+  &__btn {
+    @include laptop {
+      display: none;
+    }
+  }
+  &__mob-btn {
+    @include flex-center;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+
+    @media (min-width: 1026px) {
+      display: none;
+    }
+
+    &#burger-open {
+      font-size: 15px;
+    }
+  }
+}

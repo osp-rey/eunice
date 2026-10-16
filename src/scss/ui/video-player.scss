@@ -1,0 +1,36 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.video-player {
+  @include flex-center;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+
+  &._active {
+    .video-player__video {
+      opacity: 1;
+      visibility: visible;
+    }
+    .btn-play {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+  }
+}

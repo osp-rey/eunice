@@ -1,0 +1,146 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.form-control {
+  width: 100%;
+
+  .control-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .control-window {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 25px;
+    width: 35px;
+    height: 25px;
+    border-right: 1px solid rgba(0, 0, 0, 0.07);
+    @include laptop-min {
+      left: 20px;
+    }
+  }
+}
+
+.input {
+  --border: var(--porcelain);
+  --background: var(--porcelain);
+  --color: var(--black);
+  --border-h: rgba(38, 38, 38, 0.5);
+  --background-h: var(--porcelain);
+  --color-h: var(--black);
+  --border-f: var(--black);
+  --background-f: var(--porcelain);
+  --color-f: var(--black);
+
+  border-radius: 10px;
+  outline: none;
+  padding: 20px 20px 20px 75px;
+  width: 100%;
+
+  border: 1px solid var(--border);
+  background-color: var(--background);
+
+  font-weight: 200;
+  color: var(--color);
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+
+  @include laptop-min {
+    padding: 18px 18px 18px 70px;
+  }
+
+  @include hover {
+    color: var(--color-h);
+    background-color: var(--background-h);
+    border-color: var(--border-h);
+  }
+  &:focus {
+    color: var(--color-f) !important;
+    background-color: var(--background-f) !important;
+    border-color: var(--border-f) !important;
+  }
+
+  &::placeholder {
+    color: inherit;
+    opacity: 0.7;
+  }
+}
+
+.check-wrap {
+  position: relative;
+  input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+
+    &:checked + .wpcf7-list-item-label {
+      &::before {
+        background: var(--url) center / 12px auto no-repeat;
+        background-color: var(--background-a);
+        border-color: var(--border-a);
+
+        @include tablet {
+          background-size: 10px auto;
+        }
+      }
+    }
+  }
+
+  .wpcf7-list-item {
+    margin-left: 0;
+  }
+  .wpcf7-list-item-label {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 15px;
+    cursor: pointer;
+
+    font-size: 14px;
+
+    @include tablet {
+      font-size: 12px;
+    }
+
+    a {
+      text-decoration: underline;
+      @include hover {
+        color: var(--primary);
+      }
+    }
+
+    &::before {
+      --border: #e4e4e4;
+      --background: transparent;
+      --border-a: var(--primary);
+      --background-a: var(--primary);
+      --url: url("@img/check-white.svg");
+
+      content: "";
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      border: 1px solid var(--border);
+      background-color: var(--background);
+      border-radius: 3px;
+
+      transition:
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+
+      @include tablet {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    font-size: 14px;
+  }
+}
