@@ -25,3 +25,19 @@
     color: var(--primary);
   }
 }
+
+.t-title {
+  font-weight: 500;
+  font-size: 22px;
+  margin: 0;
+
+  @include laptop {
+    font-size: 20px;
+  }
+  @include laptop-min {
+    font-size: 18px;
+  }
+  @include tablet-min {
+    font-size: 16px;
+  }
+}

@@ -17,6 +17,10 @@
 @use "./ui/form";
 @use "./ui/sect";
 @use "./ui/video-player";
+@use "./ui/card-apply";
+@use "./ui/card-product";
+@use "./ui/more";
+@use "./ui/select";
 
 @use "./components/header";
 @use "./components/burger";
@@ -25,5 +29,12 @@
 @use "./components/s-hero";
 @use "./components/s-technology";
 @use "./components/s-apply";
+@use "./components/s-catalog";
+@use "./components/s-order";
+@use "./components/s-about";
+@use "./components/s-adv";
+@use "./components/s-steps";
+@use "./components/s-contacts";
+@use "./components/s-connect";
 
 @use "./components/footer";

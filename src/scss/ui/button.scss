@@ -9,14 +9,18 @@
   --background-h: var(--primary-h);
   --color-h: white;
 
+  --color-i: white;
+  --color-ih: white;
+
   @include flex-center;
   cursor: pointer;
   outline: none;
   width: fit-content;
   border: 1px solid var(--border);
   background-color: var(--background);
-  padding: 18px 40px;
+  padding: 15px 40px;
   border-radius: 10px;
+  gap: 15px;
 
   font-weight: 400;
   text-transform: uppercase;
@@ -34,6 +38,10 @@
     color: var(--color-h);
     border-color: var(--border-h);
     background-color: var(--background-h);
+
+    i {
+      color: var(--color-ih);
+    }
   }
 
   @include laptop {
@@ -41,7 +49,7 @@
   }
   @include tablet {
     font-size: 15px;
-    padding: 14px 25px;
+    padding: 13px 25px;
   }
   @include tablet-min {
     font-size: 14px;
@@ -54,6 +62,29 @@
     --border-h: var(--secondary);
     --background-h: var(--secondary);
     --color-h: white;
+
+    --color-i: var(--secondary);
+    --color-ih: white;
+  }
+  &._outline {
+    --border: var(--mercury);
+    --background: transparent;
+    --color: var(--black);
+    --border-h: var(--primary);
+    --background-h: transparent;
+    --color-h: var(--primary);
+  }
+
+  i {
+    flex-shrink: 0;
+    font-size: 24px;
+    color: var(--color-i);
+
+    transition: color .3s ease;
+
+    @include tablet {
+      font-size: 20px;
+    }
   }
 }
 

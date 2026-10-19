@@ -1,0 +1,47 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-apply {
+  border-top: 1px solid var(--mercury);
+  position: relative;
+  z-index: 1;
+  @include laptop {
+    overflow: hidden;
+  }
+  &__decor {
+    position: absolute;
+    pointer-events: none;
+    top: 80px;
+    width: 280px;
+    left: 0;
+    z-index: -1;
+
+    @include laptop-min {
+      top: 20px;
+      width: 160px;
+    }
+  }
+  &__slider {
+    box-sizing: border-box;
+    @include laptop {
+      overflow: visible !important;
+    }
+
+    .swiper-slide {
+      height: auto !important;
+      box-sizing: border-box;
+
+      @include laptop {
+        width: 395px !important;
+        max-width: 100%;
+      }
+      @include tablet {
+        width: 320px !important;
+      }
+
+      .card-apply {
+        height: 100%;
+      }
+    }
+  }
+}

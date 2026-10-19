@@ -1,0 +1,95 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-connect {
+  padding: 50px 0px;
+  &__wrap {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1540px;
+    @include laptop-min {
+      flex-direction: column-reverse;
+      gap: 20px;
+    }
+  }
+  &__item {
+    width: 270px;
+    border-radius: 12px;
+    padding: 25px;
+
+    text-transform: uppercase;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.5);
+
+    @include laptop-min {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+    }
+
+    i {
+      color: var(--green);
+      font-size: 30px;
+      flex-shrink: 0;
+    }
+    .item-text {
+      margin-top: 15px;
+      font-weight: 400;
+      @include laptop-min {
+        margin-top: 0;
+      }
+    }
+  }
+  &__form-wrap {
+    position: relative;
+    width: 665px;
+    border-radius: 16px;
+    padding: 40px;
+    background-color: white;
+    z-index: 1;
+    @include laptop-middle {
+      width: 580px;
+    }
+    @include laptop-min {
+      width: 670px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    @include tablet {
+      padding: 30px;
+    }
+  }
+  &__text-bg {
+    position: absolute;
+    pointer-events: none;
+    bottom: 0;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    z-index: -1;
+    @include laptop-min {
+      display: none;
+    }
+  }
+  &__content {
+    max-width: 410px;
+    margin-top: 20px;
+  }
+  &__form {
+    margin-top: 20px;
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      @include tablet {
+        gap: 10px;
+      }
+    }
+    .btn-s[type="submit"] {
+      width: 100%;
+    }
+  }
+}

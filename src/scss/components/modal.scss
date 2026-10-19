@@ -24,6 +24,7 @@
     text-align: center;
   }
   &__title {
+    font-weight: 500;
     font-size: 36px;
     @include laptop-middle {
       font-size: 32px;
@@ -45,6 +46,174 @@
     }
 
     .btn-s[type="submit"] {
+      width: 100%;
+    }
+  }
+}
+
+.modal-r {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 120;
+  font-size: 16px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  &._open {
+    opacity: 1;
+    visibility: visible;
+    .modal-r__window {
+      transform: translateX(0);
+    }
+  }
+  &__overlay {
+    position: fixed;
+    backdrop-filter: blur(20px);
+    background: rgba(38, 38, 38, 0.5);
+    inset: 0;
+    z-index: 10;
+  }
+  &__window {
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    width: 740px;
+    max-width: 100%;
+    background-color: var(--porcelain);
+    margin-left: auto;
+    padding: 60px;
+    z-index: 20;
+    transform: translateX(100%);
+    
+    transition: transform 0.4s ease;
+
+    @include laptop-middle {
+      padding: 60px 20px;
+    }
+    @include tablet {
+      padding: 50px 10px;
+    }
+  }
+  &__close {
+    @include flex-center;
+    position: absolute;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 14px;
+    color: var(--gray);
+    top: 20px;
+    right: 20px;
+
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease;
+
+    @include hover {
+      color: var(--black);
+    }
+    @include laptop-middle {
+      right: 15px;
+      top: 15px;
+    }
+
+    @include tablet {
+      width: 32px;
+      height: 32px;
+      font-size: 10px;
+      top: 10px;
+      right: 10px;
+    }
+  }
+  &__body {
+    width: 100%;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 140%;
+    margin-bottom: 20px;
+
+    @include laptop-middle {
+      font-size: 24px;
+    }
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    font-size: 14px;
+
+    @include tablet {
+      font-size: 12px;
+    }
+
+    li {
+      border-radius: 6px;
+      padding: 6px 10px;
+      background-color: var(--gallery);
+    }
+  }
+  &__content {
+    margin-top: 30px;
+    @include tablet {
+      margin-top: 20px;
+    }
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 30px;
+    @include tablet {
+      margin-top: 20px;
+    }
+  }
+  &__item {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white;
+
+    &:first-child {
+      grid-column: 2 span;
+    }
+
+    .item-title {
+      font-weight: 500;
+    }
+    .item-content {
+      margin-top: 12px;
+    }
+  }
+  &__buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 30px;
+    @include tablet {
+      margin-top: 20px;
+    }
+
+    .btn-s {
       width: 100%;
     }
   }

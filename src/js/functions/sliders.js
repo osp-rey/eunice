@@ -27,4 +27,35 @@ export default function sliders() {
       },
     });
   }
+
+  const applySlider = document.querySelector(".s-apply__slider");
+
+  if (applySlider) {
+    const swiper = new Swiper(applySlider, {
+      speed: 900,
+      spaceBetween: 10,
+      slidesPerView: "auto",
+      autoplay: {
+        delay: 5000,
+      },
+      navigation: {
+        nextEl: ".s-apply .slider-arrow._next",
+        prevEl: ".s-apply .slider-arrow._prev",
+      },
+      pagination: {
+        el: ".s-apply .slider-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        1366: {
+          spaceBetween: 20,
+          slidesPerView: 4,
+        },
+        768: {
+          spaceBetween: 15,
+          slidesPerView: "auto",
+        },
+      },
+    });
+  }
 }

@@ -5,6 +5,12 @@
   @include flex-center;
   gap: 5px;
 
+  &._lap-min {
+    @media (min-width: 1026px) {
+      display: none !important;
+    }
+  }
+
   .swiper-pagination-bullet {
     margin: 0 !important;
     background-color: var(--black);
@@ -22,5 +28,55 @@
       opacity: 1;
       flex-basis: 25px;
     }
+  }
+}
+
+.slider-arrows {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+  @include tablet {
+    gap: 5px;
+  }
+}
+.slider-arrow {
+  --background: transparent;
+  --border: var(--primary);
+  --color: var(--primary);
+  --background-h: var(--primary);
+  --border-h: var(--primary);
+  --color-h: white;
+
+  @include flex-center;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  flex-shrink: 0;
+
+  font-size: 14px;
+  color: var(--color);
+
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    opacity 0.3s ease;
+
+  @include tablet {
+    width: 52px;
+    height: 52px;
+  }
+  @include hover {
+    background-color: var(--background-h);
+    border-color: var(--border-h);
+    color: var(--color-h);
+  }
+  &.swiper-button-disabled {
+    --border: rgba(143, 143, 143, 0.3);
+    --color: var(--gray);
+    pointer-events: none;
   }
 }
