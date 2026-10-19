@@ -2187,7 +2187,7 @@ img {
   transition: color 0.3s ease;
 }
 
-.s-contacts__item .icon-tel {
+.s-contacts__item .icon-outline-tel {
   color: var(--primary);
 }
 
