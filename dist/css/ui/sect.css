@@ -1,0 +1,157 @@
+.sect-wrap {
+  display: flex;
+  align-items: start;
+  gap: 55px;
+}
+
+.sect-head {
+  margin-bottom: 40px;
+}
+
+.sect-head__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.sect-head__nav {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.sect-tag {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+  color: #8f8f8f;
+  flex-shrink: 0;
+}
+
+.sect-body {
+  flex: 1;
+  width: 100%;
+}
+
+.sect-m {
+  margin: 90px 0px;
+}
+
+.sect-p {
+  padding: 90px 0px;
+}
+
+.sect-p.bg-porcelain {
+  background-color: var(--porcelain);
+}
+
+.sect-p.bg-porcelain + .sect-p.bg-porcelain {
+  padding-top: 0 !important;
+}
+
+.sect-p.bg-outer {
+  background-color: var(--outer);
+}
+
+.sect-p.bg-outer + .sect-p.bg-outer {
+  padding-top: 0 !important;
+}
+
+@media (min-width: 1026px) {
+  .sect-tag._lap-min {
+    display: none;
+  }
+}
+
+@media (min-width: 1366px) {
+  .sect-tag {
+    position: sticky;
+    writing-mode: sideways-lr;
+  }
+}
+
+@media (max-width: 1679px) {
+  .sect-wrap {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 1539px) {
+  .sect-wrap {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1365px) {
+  .sect-wrap {
+    display: block;
+  }
+
+  .sect-tag {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .sect-m {
+    margin: 75px 0px;
+  }
+
+  .sect-p {
+    padding: 75px 0px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .sect-head {
+    margin-bottom: 30px;
+  }
+
+  .sect-tag {
+    font-size: 16px;
+  }
+
+  .sect-tag._m-lap-min {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .sect-head {
+    margin-bottom: 20px;
+  }
+
+  .sect-head__wrap {
+    gap: 10px;
+  }
+
+  .sect-head__nav {
+    gap: 10px;
+  }
+
+  .sect-m {
+    margin: 50px 0px;
+  }
+
+  .sect-p {
+    padding: 50px 0px;
+  }
+}
+
+@media (max-width: 575px) {
+  .sect-head__nav {
+    width: 100%;
+  }
+
+  .sect-head__nav .btn-s {
+    flex: 1;
+  }
+
+  .sect-tag {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+}

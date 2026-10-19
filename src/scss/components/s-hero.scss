@@ -5,16 +5,20 @@
   position: relative;
   overflow: hidden;
   padding-top: 90px;
+  scroll-margin-top: 90px;
   // min-height: 700px;
   z-index: 1;
   @include laptop {
     padding-top: 70px;
+    scroll-margin-top: 70px;
   }
   @include laptop-min {
     padding-top: 50px;
+    scroll-margin-top: 50px;
   }
   @include tablet {
     padding-top: 40px;
+    scroll-margin-top: 40px;
   }
 
   &__bg-slider {

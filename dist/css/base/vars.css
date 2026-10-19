@@ -1,0 +1,17 @@
+:root {
+  --content-width: 1720px;
+  --offset-width: 15px;
+  --container-width: calc(var(--content-width) + (var(--offset-width) * 2));
+  --primary: #cd1125;
+  --primary-h: #b31323;
+  --secondary: #2a7abe;
+  --secondary-light: #e8eff3;
+  --green: #4ea847;
+  --saltpan: #ebf3eb;
+  --black: #262626;
+  --gray: #8f8f8f;
+  --porcelain: #f6f7f8;
+  --mercury: #e4e4e4;
+  --gallery: #efefef;
+  --outer: #313840;
+}

@@ -1,0 +1,190 @@
+.btn-s {
+  --border: var(--primary);
+  --background: var(--primary);
+  --color: white;
+  --border-h: var(--primary-h);
+  --background-h: var(--primary-h);
+  --color-h: white;
+  --color-i: white;
+  --color-ih: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  width: fit-content;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  padding: 15px 40px;
+  border-radius: 10px;
+  gap: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color);
+  font-size: 18px;
+  text-transform: uppercase;
+  user-select: none;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-s._outline-secondary-white {
+  --border: var(--secondary);
+  --background: white;
+  --color: var(--black);
+  --border-h: var(--secondary);
+  --background-h: var(--secondary);
+  --color-h: white;
+  --color-i: var(--secondary);
+  --color-ih: white;
+}
+
+.btn-s._outline {
+  --border: var(--mercury);
+  --background: transparent;
+  --color: var(--black);
+  --border-h: var(--primary);
+  --background-h: transparent;
+  --color-h: var(--primary);
+}
+
+.btn-s i {
+  flex-shrink: 0;
+  font-size: 24px;
+  color: var(--color-i);
+  transition: color 0.3s ease;
+}
+
+.btn-arrow {
+  --border: var(--black);
+  --background: rgba(38, 38, 38, 0.1);
+  --color: var(--black);
+  --border-h: var(--black);
+  --background-h: var(--black);
+  --color-h: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  backdrop-filter: blur(10px);
+  color: var(--color);
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-arrow._white {
+  --border: white;
+  --background: rgba(38, 38, 38, 0.3);
+  --color: white;
+  --border-h: var(--primary);
+  --background-h: rgba(38, 38, 38, 0.3);
+  --color-h: white;
+}
+
+.btn-play {
+  --border: var(--primary);
+  --background: white;
+  --color: var(--primary);
+  --border-h: var(--primary);
+  --background-h: var(--primary);
+  --color-h: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--color);
+  font-size: 33px;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.btn-play i {
+  transform: translateX(3px);
+}
+
+@media (max-width: 1365px) {
+  .btn-s {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .btn-play {
+    width: 80px;
+    height: 80px;
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 767px) {
+  .btn-s {
+    font-size: 15px;
+    padding: 13px 25px;
+  }
+
+  .btn-s i {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .btn-s {
+    font-size: 14px;
+  }
+}
+
+@media (any-hover: hover) {
+  .btn-s:hover {
+    color: var(--color-h);
+    border-color: var(--border-h);
+    background-color: var(--background-h);
+  }
+
+  .btn-s:hover i {
+    color: var(--color-ih);
+  }
+
+  .btn-arrow:hover {
+    border-color: var(--border-h);
+    background-color: var(--background-h);
+    color: var(--color-h);
+  }
+
+  .btn-play:hover {
+    background-color: var(--background-h);
+    border-color: var(--border-h);
+    color: var(--color-h);
+  }
+}
+
+@media (hover: none) {
+  .btn-s:active {
+    color: var(--color-h);
+    border-color: var(--border-h);
+    background-color: var(--background-h);
+  }
+
+  .btn-s:active i {
+    color: var(--color-ih);
+  }
+
+  .btn-arrow:active {
+    border-color: var(--border-h);
+    background-color: var(--background-h);
+    color: var(--color-h);
+  }
+
+  .btn-play:active {
+    background-color: var(--background-h);
+    border-color: var(--border-h);
+    color: var(--color-h);
+  }
+}

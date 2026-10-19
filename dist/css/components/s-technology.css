@@ -1,0 +1,156 @@
+.s-technology__head {
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.s-technology__content {
+  margin-top: 20px;
+}
+
+.s-technology__wrap {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.s-technology__adv {
+  flex: 0 1 600px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.s-technology__adv-item .item-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.s-technology__adv-item .item-circle img {
+  display: block;
+  width: 25px;
+}
+
+.s-technology__adv-item .item-title {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.s-technology__adv-item .item-text {
+  margin-top: 10px;
+}
+
+.s-technology__gallery {
+  position: relative;
+  width: 980px;
+  max-width: 100%;
+}
+
+.s-technology__gallery-decor {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 90%;
+  top: -24%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.s-technology__video-player {
+  width: 100%;
+  aspect-ratio: 1/0.55;
+}
+
+@media (max-width: 1539px) {
+  .s-technology__gallery {
+    width: 800px;
+  }
+}
+
+@media (max-width: 1365px) {
+  .s-technology__adv-item .item-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .s-technology__wrap {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .s-technology__adv {
+    flex: auto;
+    width: 100%;
+  }
+
+  .s-technology__gallery {
+    margin: 0 auto;
+    width: 980px;
+    padding-top: 90px;
+  }
+
+  .s-technology__gallery-decor {
+    top: 0;
+  }
+}
+
+@media (max-width: 1025px) {
+  .s-technology__adv {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .s-technology__adv-item .item-circle {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .s-technology__adv-item .item-circle img {
+    width: 20px;
+  }
+
+  .s-technology__adv-item .item-title {
+    font-size: 16px;
+  }
+
+  .s-technology__adv-item .item-text {
+    margin-top: 5px;
+  }
+
+  .s-technology__gallery {
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 575px) {
+  .s-technology__adv {
+    gap: 15px;
+    grid-template-columns: 1fr;
+  }
+
+  .s-technology__adv-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .s-technology__adv-item .item-circle {
+    margin-bottom: 0;
+  }
+
+  .s-technology__gallery {
+    padding-top: 35px;
+  }
+
+  .s-technology__gallery-decor {
+    width: 250px;
+  }
+}

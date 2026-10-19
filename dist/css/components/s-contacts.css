@@ -1,0 +1,144 @@
+.s-contacts__wrap {
+  display: flex;
+  gap: 50px;
+}
+
+.s-contacts__info {
+  flex: 0 1 540px;
+}
+
+.s-contacts__content {
+  margin-top: 20px;
+}
+
+.s-contacts__grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.s-contacts__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.s-contacts__item .item-preview {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  flex-shrink: 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.s-contacts__item .item-preview i {
+  font-size: 30px;
+}
+
+.s-contacts__item .item-val {
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.s-contacts__item a.item-val {
+  transition: color 0.3s ease;
+}
+
+.s-contacts__item .icon-tel {
+  color: var(--primary);
+}
+
+.s-contacts__item .icon-mail {
+  color: var(--secondary);
+}
+
+.s-contacts__item .icon-location {
+  color: #4ea847;
+}
+
+.s-contacts__item .icon-clock {
+  color: var(--primary);
+}
+
+.s-contacts__item .icon-message {
+  color: var(--secondary);
+}
+
+.s-contacts__map {
+  flex: 1;
+  min-height: 450px;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.03);
+  border: 3px solid white;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+@media (max-width: 1365px) {
+  .s-contacts__wrap {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .s-contacts__info {
+    flex-basis: 405px;
+  }
+
+  .s-contacts__item {
+    padding: 20px;
+  }
+
+  .s-contacts__item .item-val {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .s-contacts__wrap {
+    flex-wrap: wrap;
+  }
+
+  .s-contacts__info {
+    flex: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .s-contacts__wrap {
+    gap: 20px;
+  }
+
+  .s-contacts__grid {
+    gap: 5px;
+  }
+
+  .s-contacts__item {
+    gap: 15px;
+  }
+
+  .s-contacts__item .item-preview {
+    width: 40px;
+  }
+
+  .s-contacts__item .item-preview i {
+    font-size: 24px;
+  }
+}
+
+@media (any-hover: hover) {
+  .s-contacts__item a.item-val:hover {
+    color: var(--primary);
+  }
+}
+
+@media (hover: none) {
+  .s-contacts__item a.item-val:active {
+    color: var(--primary);
+  }
+}

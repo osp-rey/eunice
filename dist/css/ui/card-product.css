@@ -1,0 +1,160 @@
+.card-product {
+  border-radius: 16px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-product__img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+}
+
+.card-product__body {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.card-product__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.card-product__list li {
+  padding: 6px 10px;
+  border-radius: 6px;
+  background-color: var(--saltpan);
+}
+
+.card-product__content {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--gray);
+}
+
+.card-product__btn-more {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 400;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.card-product__btn-more i {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.card-product__buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+  width: 100%;
+}
+
+.card-product__buttons .btn-s {
+  flex: 1;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+
+.card-product__btn-download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  background-color: var(--secondary-light);
+  border-radius: 10px;
+  flex-shrink: 0;
+  font-weight: 400;
+  color: var(--secondary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-product__btn-download i {
+  font-size: 24px;
+}
+
+@media (min-width: 1026px) {
+  .card-product__btn-download span {
+    display: none;
+  }
+}
+
+@media (max-width: 1025px) {
+  .card-product__buttons {
+    flex-wrap: wrap;
+  }
+
+  .card-product__btn-download {
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card-product__body {
+    padding: 0;
+  }
+
+  .card-product__list {
+    font-size: 12px;
+  }
+
+  .card-product__content {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+
+  .card-product__btn-more {
+    font-size: 14px;
+  }
+
+  .card-product__btn-more i {
+    font-size: 10px;
+  }
+
+  .card-product__buttons {
+    margin-top: 15px;
+  }
+}
+
+@media (any-hover: hover) {
+  .card-product__btn-more:hover {
+    color: var(--primary);
+  }
+
+  .card-product__btn-download:hover {
+    color: white;
+    background-color: var(--secondary);
+  }
+}
+
+@media (hover: none) {
+  .card-product__btn-more:active {
+    color: var(--primary);
+  }
+
+  .card-product__btn-download:active {
+    color: white;
+    background-color: var(--secondary);
+  }
+}

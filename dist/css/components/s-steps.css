@@ -1,0 +1,140 @@
+.s-steps__wrap {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.s-steps__main {
+  flex: 0 1 720px;
+}
+
+.s-steps__content {
+  margin-top: 20px;
+}
+
+.s-steps__wrap-grid {
+  position: relative;
+  flex: 0 1 860px;
+  padding-left: 40px;
+  border-left: 1px solid var(--mercury);
+}
+
+.s-steps__wrap-grid::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  transform: translateX(-50%);
+  width: 3px;
+  background-color: var(--primary);
+  height: var(--progress);
+  transition: height 0.3s ease;
+}
+
+.s-steps__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+}
+
+.s-steps__item {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.s-steps__item._active {
+  opacity: 1;
+}
+
+.s-steps__item .item-num {
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 20px;
+}
+
+.s-steps__item .item-title {
+  font-weight: 500;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.s-steps__item .item-content {
+  margin-top: 20px;
+}
+
+.s-steps__btn {
+  margin-top: 50px;
+}
+
+@media (min-width: 1026px) {
+  .s-steps__main {
+    position: sticky;
+  }
+}
+
+@media (max-width: 1025px) {
+  .s-steps__wrap {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .s-steps__main {
+    flex: auto;
+    width: 100%;
+  }
+
+  .s-steps__wrap-grid {
+    padding-left: 30px;
+  }
+
+  .s-steps__grid {
+    gap: 30px;
+  }
+
+  .s-steps__item .item-num {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .s-steps__item .item-title {
+    font-size: 20px;
+  }
+
+  .s-steps__item .item-content {
+    margin-top: 10px;
+  }
+
+  .s-steps__btn {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .s-steps__wrap-grid {
+    padding-left: 20px;
+  }
+
+  .s-steps__grid {
+    gap: 20px;
+  }
+
+  .s-steps__item .item-num {
+    font-size: 12px;
+  }
+
+  .s-steps__item .item-title {
+    font-size: 16px;
+  }
+
+  .s-steps__btn {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .s-steps__btn {
+    width: 100%;
+  }
+}

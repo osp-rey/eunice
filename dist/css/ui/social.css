@@ -1,0 +1,43 @@
+.social {
+  display: flex;
+  gap: 15px;
+}
+
+.social-item {
+  --border: var(--primary);
+  --background: var(--primary);
+  --color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  color: var(--color);
+  border-radius: 50%;
+  font-size: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+}
+
+.social-item._tg {
+  background-color: #2aabee;
+  border: none;
+}
+
+.social-item._max {
+  border: none;
+  background: linear-gradient(135deg, #1d3eee 0%, #ba15f2 100%), radial-gradient(40.7% 40.7% at 70% 27.5%, #7432e3 0%, rgba(116, 50, 227, 0) 100%), radial-gradient(61.9% 61.9% at 7.5% 92.5%, #32b7fc 0%, rgba(52, 185, 252, 0) 100%);
+}
+
+@media (any-hover: hover) {
+  .social-item:hover {
+    opacity: 0.7;
+  }
+}
+
+@media (hover: none) {
+  .social-item:active {
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,142 @@
+.burger {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 10px;
+  font-size: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-100%);
+  z-index: 110;
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+}
+
+.burger._open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.burger__head {
+  margin-bottom: 30px;
+}
+
+.burger__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  font-size: 14px;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.burger__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  text-transform: uppercase;
+  gap: 20px;
+}
+
+.burger__list a {
+  transition: color 0.3s ease;
+}
+
+.burger__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 30px;
+  border-radius: 20px;
+  margin-top: 20px;
+  background-color: var(--porcelain);
+}
+
+.burger__tel {
+  font-weight: 400;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.burger__contacts-list {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.burger__contacts-list .item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.burger__contacts-list .item i {
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+.burger__contacts-list .item .icon-mail {
+  color: var(--primary);
+}
+
+.burger__contacts-list .item .icon-location {
+  color: var(--secondary);
+}
+
+.burger__contacts-list .item .icon-clock {
+  color: var(--green);
+}
+
+.burger__btn {
+  width: 100%;
+  margin-top: 30px;
+}
+
+@media (min-width: 1026px) {
+  .burger {
+    display: none;
+  }
+}
+
+@media (any-hover: hover) {
+  .burger__close:hover {
+    background-color: var(--primary-h);
+  }
+
+  .burger__list a:hover {
+    color: var(--primary);
+  }
+
+  .burger__tel:hover {
+    color: var(--primary);
+  }
+}
+
+@media (hover: none) {
+  .burger__close:active {
+    background-color: var(--primary-h);
+  }
+
+  .burger__list a:active {
+    color: var(--primary);
+  }
+
+  .burger__tel:active {
+    color: var(--primary);
+  }
+}

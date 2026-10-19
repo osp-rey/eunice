@@ -1,0 +1,156 @@
+.form-control {
+  width: 100%;
+}
+
+.form-control .control-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-control .control-window {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 25px;
+  width: 35px;
+  height: 25px;
+  font-size: 20px;
+  border-right: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.input {
+  --border: var(--porcelain);
+  --background: var(--porcelain);
+  --color: var(--black);
+  --border-h: rgba(38, 38, 38, 0.5);
+  --background-h: var(--porcelain);
+  --color-h: var(--black);
+  --border-f: var(--black);
+  --background-f: var(--porcelain);
+  --color-f: var(--black);
+  border-radius: 10px;
+  outline: none;
+  padding: 20px 20px 20px 75px;
+  width: 100%;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  font-weight: 200;
+  color: var(--color);
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.input:focus {
+  color: var(--color-f) !important;
+  background-color: var(--background-f) !important;
+  border-color: var(--border-f) !important;
+}
+
+.input::placeholder {
+  color: inherit;
+  opacity: 0.7;
+}
+
+.check-wrap {
+  position: relative;
+}
+
+.check-wrap input[type=checkbox] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+.check-wrap input[type=checkbox]:checked + .wpcf7-list-item-label::before {
+  background: var(--url) center/12px auto no-repeat;
+  background-color: var(--background-a);
+  border-color: var(--border-a);
+}
+
+.check-wrap .wpcf7-list-item {
+  margin-left: 0;
+}
+
+.check-wrap .wpcf7-list-item-label {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.check-wrap .wpcf7-list-item-label a {
+  text-decoration: underline;
+}
+
+.check-wrap .wpcf7-list-item-label::before {
+  --border: #e4e4e4;
+  --background: transparent;
+  --border-a: var(--primary);
+  --background-a: var(--primary);
+  --url: url("../img/check-white.svg");
+  content: "";
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  border-radius: 3px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.check-wrap .wpcf7-list-item-label {
+  font-size: 14px;
+}
+
+@media (max-width: 1025px) {
+  .form-control .control-window {
+    left: 20px;
+  }
+
+  .input {
+    padding: 18px 18px 18px 70px;
+  }
+}
+
+@media (max-width: 767px) {
+  .check-wrap input[type=checkbox]:checked + .wpcf7-list-item-label::before {
+    background-size: 10px auto;
+  }
+
+  .check-wrap .wpcf7-list-item-label {
+    font-size: 12px;
+  }
+
+  .check-wrap .wpcf7-list-item-label::before {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (any-hover: hover) {
+  .input:hover {
+    color: var(--color-h);
+    background-color: var(--background-h);
+    border-color: var(--border-h);
+  }
+
+  .check-wrap .wpcf7-list-item-label a:hover {
+    color: var(--primary);
+  }
+}
+
+@media (hover: none) {
+  .input:active {
+    color: var(--color-h);
+    background-color: var(--background-h);
+    border-color: var(--border-h);
+  }
+
+  .check-wrap .wpcf7-list-item-label a:active {
+    color: var(--primary);
+  }
+}
